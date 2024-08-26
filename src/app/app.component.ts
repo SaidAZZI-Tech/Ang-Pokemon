@@ -7,12 +7,7 @@ import { Pokemon } from './pokemon';
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet],
-  template: `
-    <h1>Liste de Pokemons</h1>
-
-    <router-outlet />
-  `,
-  styles: [],
+  templateUrl: 'app.ccomponent.html'
 })
 export class AppComponent implements OnInit {
   pokemonList  = POKEMON_LIST;
@@ -21,7 +16,6 @@ export class AppComponent implements OnInit {
     console.table (this.pokemonList) ;
    // this.selectPokemon(this.pokemonList[0]) ; 
   }
-
 
 selectPokemon(pokemon: Pokemon) {
   console.log(`Vous avez clique sur le pokemon ${pokemon.name }`)
